@@ -38,7 +38,7 @@ public class ItemBoundaryCallBack extends PagedList.BoundaryCallback<Item> {
     @Override
     public void onZeroItemsLoaded() {
         Log.d(TAG, "onZeroItemsLoaded: Called");
-        if (isFetchNeeded()) // Todo can be useful for checking new content if removed
+        if (isFetchNeeded())
             mClient.fetchFirstNetworkCall().enqueue(getRetrofitCallback());
     }
 
